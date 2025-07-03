@@ -11,6 +11,11 @@ public class NotifyService {
     @Bean
     public Consumer<String> consumerAck(){
 
-        return System.out::println;
+        return (str)->{
+            System.out.println("Inside order service ACK");
+            System.out.println("**********************************");
+            System.out.println("data updated: "+str);
+
+        };
     }
 }
